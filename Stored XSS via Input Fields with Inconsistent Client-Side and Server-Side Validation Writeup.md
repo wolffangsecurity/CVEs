@@ -23,14 +23,16 @@ Two fields in the account creation form are vulnerable to Stored XSS in Openkm C
 	 - http://localhost:8080/OpenKM/admin/Auth?action=userCreate
  5. This will generate an alert box with the text "XSS"
 
-<img width="573" height="243" alt="image" src="https://github.com/user-attachments/assets/0f0c02da-8cda-4ae1-9700-beb73723992b" />
-<img width="553" height="184" alt="image" src="https://github.com/user-attachments/assets/f4871bff-77e7-4061-8aac-4b0871469735" />
+<img width="573" height="243" alt="466188690-0f0c02da-8cda-4ae1-9700-beb73723992b" src="https://github.com/user-attachments/assets/046545e3-f957-4bce-859d-298c74fe455b" />
+<img width="553" height="184" alt="466188757-f4871bff-77e7-4061-8aac-4b0871469735" src="https://github.com/user-attachments/assets/768436a6-aaa5-448c-9baf-2c27ce61e97a" />
+
 
 ### **Vector 2: Email Field**
 1. Use a tool like Burp Suite to intercept a POST request when creating a user
 2. Replace the value of the `usr_email` field with `%3Cscript%3Ealert%28%27XSS%27%29%3C%2Fscript%3E`
-<img width="774" height="440" alt="image" src="https://github.com/user-attachments/assets/9b3fe357-49d6-47e0-909b-4b681bb025d9" />
-<img width="553" height="184" alt="image" src="https://github.com/user-attachments/assets/f4871bff-77e7-4061-8aac-4b0871469735" />
+<img width="774" height="440" alt="466188982-9b3fe357-49d6-47e0-909b-4b681bb025d9" src="https://github.com/user-attachments/assets/1af1ae7c-4bee-4df0-af8e-7090000ee8a4" />
+<img width="553" height="184" alt="466188757-f4871bff-77e7-4061-8aac-4b0871469735" src="https://github.com/user-attachments/assets/768436a6-aaa5-448c-9baf-2c27ce61e97a" />
+
 
 
 
